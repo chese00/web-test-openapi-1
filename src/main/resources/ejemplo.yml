@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: 'S4 Reprocessing UI'
+  description: 'This is an Error processing server.'
+  version: 1.0.0
+tags:
+  - name: ejemplo
+    description: Everything about FIORG_XREF master data
+paths:
+  /ejemplo:
+    get:
+      tags:
+        - ejemplo
+      summary: Finds Cross Reference Master Data
+      description: Division_Number, Store_number.
+      operationId: ejemplo
+      parameters:
+        - name: divisionNumber
+          in: query
+          description: Division number value
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EjemploResponse'
+components:
+  schemas:
+    EjemploResponse:
+      type: object
+      properties:
+        cadena:
+          type: string
+          minLength: 3
+        numero:
+          type: integer
+          format: int64

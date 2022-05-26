@@ -28,6 +28,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EjemploResponse'
+  /ejemplo1:
+    get:
+      tags:
+        - ejemplo
+      summary: Summary summary
+      description: Description description
+      operationId: ejemplo1
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EjemploResponseList'
 components:
   schemas:
     EjemploResponse:
@@ -39,3 +53,11 @@ components:
         numero:
           type: integer
           format: int64
+    EjemploResponseList:
+      type: array
+      xml:
+        name: ejemplo1
+        wrapped: true
+      items:
+        type: object
+        $ref: '#/components/schemas/EjemploResponse'

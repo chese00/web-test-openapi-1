@@ -7,7 +7,8 @@
 		<version>2.7.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.casa</groupId>
+	
+<groupId>com.casa</groupId>
 	<artifactId>web-test-openapi-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>web-test-openapi-1</name>

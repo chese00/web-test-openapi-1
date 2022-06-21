@@ -3,11 +3,12 @@ spring:
     username: sa
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
-    password: password
+    password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: 'none'
+      show-sql: true
   h2:
     console:
       enabled: 'true'
